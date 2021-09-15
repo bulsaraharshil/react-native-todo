@@ -15,7 +15,7 @@ const App = () => {
   };
 
   const fetchTodos = async() => {
-    const data = AsyncStorage.getItem('todos');
+    const data = await AsyncStorage.getItem('todos');
     if(data) setTodos(JSON.parse(data));
   }
 
